@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{siunitx}
+\usepackage{amsmath}
+\usepackage{accents}
+\usepackage{listings}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{amsfonts}
+\usepackage{breakurl}
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{indentfirst}
+\usepackage{supertabular}
+\usepackage[titles]{tocloft}
+
+\def\UrlBreaks{\do\/\do-} % URL breaking characters
+
+\newcommand{\red}[1]{\textcolor{red}{#1}} % \red{text in red}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
+\newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
+
+\renewcommand{\cftdot}{}
+
+\setlength\parindent{0pt} % do NOT indent
+\graphicspath{{img/}} % path to images
+
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+
+\begin{document}
+
+\begin{titlepage}
+    \begin{center}
+        \Huge
+        \textsc{
+            Fakulta informačních technologií\\
+            Vysoké učení technické v~Brně
+        }
+        \vspace{80px}
+        \begin{figure}[!h]
+            \centering
+            \includegraphics[scale=0.3]{vutbr-fit-logo.eps}
+        \end{figure}
+        \\[15mm]
+        \Huge{
+            \textbf{
+                ABC
+            }
+        }
+        \\[1.5mm]
+        \huge{
+            \textbf{
+                Název předmetu
+            }
+        }
+        \\[2.5em]
+        \LARGE{
+            \textbf{
+                Název dokumentu
+            }
+        }
+        \vfill
+    \end{center}
+        \Large{
+            Jméno Příjmení (xlogin00)\hfill \today
+        }
+
+\end{titlepage}
+
+\setlength{\parskip}{0pt}
+    \hypersetup{hidelinks}\tableofcontents
+\setlength{\parskip}{0pt}
+
+\newpage
+
+\section{Název kapitoly}
+
+Text v kapitole s citací~\cite{BOOK}.
+
+\newpage
+
+\section{Literatura}
+\bibliographystyle{czechiso}
+\begin{flushleft}
+    \bibliography{quotation}
+\end{flushleft}
+
+\end{document}
