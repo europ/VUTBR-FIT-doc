@@ -2,7 +2,7 @@
 
 ### Custom logo
 
-* VUT logos are available [here](https://www.vutbr.cz/jvs).
+* Logos are available online [here](https://www.vutbr.cz/jvs).
 * To change doc logo, add it to the `img/` folder and change the code below properly
   ```tex
   \includegraphics[scale=0.3]{vutbr-fit-logo.eps}
