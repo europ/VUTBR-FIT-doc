@@ -44,37 +44,52 @@
 \begin{document}
 
 \begin{titlepage}
+
     \begin{center}
-        \Huge
-        \textsc{
-            Fakulta informačních technologií\\
-            Vysoké učení technické v~Brně
-        }
-        \vspace{80px}
+        % FIX: lines must end with '%', if not then it will result in an incorrect centering
+        \vfill {%
+            \Huge{%
+                \textsc{%
+                    Fakulta informačních technologií\\[3mm]%
+                    Vysoké učení technické v~Brně%
+                }%
+            }%
+        }%
+
+        \hfill\\[15mm]
+
         \begin{figure}[!h]
             \centering
             \includegraphics[scale=0.3]{vutbr-fit-logo.eps}
         \end{figure}
-        \\[15mm]
+
+        \hfill\\[10mm]
+
         \Huge{
             \textbf{
                 ABC
             }
         }
-        \\[1.5mm]
+
+        \hfill\\[-10mm]
+
         \huge{
             \textbf{
                 Název předmetu
             }
         }
-        \\[2.5em]
+
+        \hfill\\[10mm]
+
         \LARGE{
             \textbf{
                 Název dokumentu
             }
         }
         \vfill
+
     \end{center}
+
         \Large{
             Jméno Příjmení (xlogin00)\hfill \today
         }
