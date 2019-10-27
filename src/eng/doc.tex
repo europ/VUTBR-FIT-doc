@@ -1,45 +1,34 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[left=2cm,text={17cm,24cm},top=3cm]{geometry}
-\usepackage[english]{babel}
+\usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
 \usepackage{url}
-\usepackage{tikz}
 \usepackage{float}
-\usepackage{xcolor}
-\usepackage{siunitx}
-\usepackage{amsmath}
-\usepackage{accents}
 \usepackage{comment}
-\usepackage{listings}
-\usepackage{csquotes}
-\usepackage{hyperref}
-\usepackage{textcomp}
-\usepackage{amsfonts}
-\usepackage{breakurl}
 \usepackage{etoolbox}
 \usepackage{graphicx}
-\usepackage{multicol}
-\usepackage{multirow}
-\usepackage{indentfirst}
-\usepackage{supertabular}
-\usepackage[titles]{tocloft}
+\usepackage{hyperref}
+\usepackage{tocloft}
 
-\def\UrlBreaks{\do\/\do-} % URL breaking characters
+\def\UrlBreaks{\do\/\do-\do\&\do=\do\_\do?} % URL breaking characters
 
 \newcommand{\red}[1]{\textcolor{red}{#1}} % \red{text in red}
 \newcommand{\blue}[1]{\textcolor{blue}{#1}} % \blue{text in blue}
 \newcommand{\TODO}{\textbf{\textcolor{red}{TODO}}} % red bold TODO
 \newcommand{\tilda}{\raisebox{0.5ex}{\texttildelow}} % command \tilda for '~' character
 
-\renewcommand{\cftdot}{}
-
-\setlength\parindent{0pt} % do NOT indent
 \graphicspath{{img/}} % path to images
-
-\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{} % do not create section for bibliography
+\hypersetup{
+    linktoc    = all,
+    colorlinks = true,
+    citecolor  = green,
+    linkcolor  = red,
+    urlcolor   = blue,
+}
 
 \begin{document}
 
@@ -97,14 +86,19 @@
 \end{titlepage}
 
 \setlength{\parskip}{0pt}
-    \hypersetup{hidelinks}\tableofcontents
+    {
+        \hypersetup{
+            hidelinks=true
+        }
+        \tableofcontents
+    }
 \setlength{\parskip}{0pt}
 
 \newpage
 
 \section{Section title}
 
-Section text with cite~\cite{BOOK}.
+Section text\footnote{Text.} with cite~\cite{BOOK}.
 
 \newpage
 
